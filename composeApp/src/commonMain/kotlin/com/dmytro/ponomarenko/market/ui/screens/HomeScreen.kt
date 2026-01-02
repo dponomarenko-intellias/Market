@@ -6,7 +6,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
-import cafe.adriel.voyager.koin.koinScreenModel
 import com.dmytro.ponomarenko.market.presentation.HomeUiEvent
 import com.dmytro.ponomarenko.market.presentation.HomeViewModel
 import com.dmytro.ponomarenko.market.ui.components.CategoryPanel
