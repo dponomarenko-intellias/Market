@@ -145,7 +145,7 @@ fun ProductCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "$${String.format("%.2f", product.price)}",
+                    text = "$${(product.price * 100).toInt() / 100.0}",
                     style = MaterialTheme.typography.titleLarge,
                     color = MaterialTheme.colorScheme.primary
                 )
@@ -160,7 +160,7 @@ fun ProductCard(
                         color = MaterialTheme.colorScheme.tertiary
                     )
                     Text(
-                        text = String.format("%.1f", product.rating),
+                        text = "${(product.rating * 10).toInt() / 10.0}",
                         style = MaterialTheme.typography.bodyMedium
                     )
                     Text(
