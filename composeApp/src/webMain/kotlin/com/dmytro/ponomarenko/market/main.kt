@@ -1,11 +1,14 @@
 package com.dmytro.ponomarenko.market
 
 import androidx.compose.ui.ExperimentalComposeUiApi
-import androidx.compose.ui.window.ComposeViewport
+import androidx.compose.ui.window.CanvasBasedWindow
+import org.jetbrains.skiko.wasm.onWasmReady
 
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
-    ComposeViewport {
-        App()
+    onWasmReady {
+        CanvasBasedWindow("Market") {
+            App()
+        }
     }
 }
