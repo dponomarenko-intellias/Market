@@ -231,7 +231,7 @@ The app uses Voyager for type-safe navigation:
 ## Dependencies Added
 
 All required dependencies have been added to `gradle/libs.versions.toml`:
-- Voyager 1.1.0 (navigator, screenmodel, koin integration)
+- Voyager 1.0.1 (navigator, screenmodel, koin integration)
 - Koin 4.0.1 (core, compose, viewmodel)
 - Ktor 3.3.3 (client-core, content-negotiation, serialization, logging)
 - Kamel 0.9.5 (image loading)

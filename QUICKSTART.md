@@ -101,7 +101,7 @@ Start with these files to understand the implementation:
 ### ✅ Tech Stack
 - Kotlin 2.3.0
 - Compose Multiplatform 1.9.3
-- Voyager 1.1.0 (Navigation)
+- Voyager 1.0.1 (Navigation)
 - Koin 4.0.1 (DI)
 - Ktor 3.3.3 (Networking - prepared)
 - Kamel 0.9.5 (Image loading)
