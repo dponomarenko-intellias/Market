@@ -46,10 +46,6 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-            // Voyager Navigation (Android)
-            implementation(libs.voyager.navigator)
-            implementation(libs.voyager.screenModel)
-            implementation(libs.voyager.koin)
             // Kamel Image Loading (Android)
             implementation(libs.kamel.image)
         }
@@ -81,26 +77,14 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
-            // Voyager Navigation (JVM)
-            implementation(libs.voyager.navigator)
-            implementation(libs.voyager.screenModel)
-            implementation(libs.voyager.koin)
             // Kamel Image Loading (JVM)
             implementation(libs.kamel.image)
         }
         iosMain.dependencies {
-            // Voyager Navigation (iOS)
-            implementation(libs.voyager.navigator)
-            implementation(libs.voyager.screenModel)
-            implementation(libs.voyager.koin)
             // Kamel Image Loading (iOS)
             implementation(libs.kamel.image)
         }
         jsMain.dependencies {
-            // Voyager Navigation (JS)
-            implementation(libs.voyager.navigator)
-            implementation(libs.voyager.screenModel)
-            implementation(libs.voyager.koin)
             // Kamel Image Loading (JS)
             implementation(libs.kamel.image)
         }
