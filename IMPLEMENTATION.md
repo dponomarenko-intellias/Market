@@ -7,13 +7,15 @@ This implementation establishes the foundation for a Kotlin Multiplatform e-comm
 ## Architecture
 
 ### Tech Stack
-- **Kotlin Multiplatform**: Shared business logic across Android and Web (WasmJS)
+- **Kotlin Multiplatform**: Shared business logic across Android, iOS, Desktop (JVM), and Web (JS)
 - **Compose Multiplatform**: Shared UI across all platforms
 - **Voyager**: Type-safe navigation library
 - **Koin**: Dependency injection
 - **Ktor Client**: HTTP networking with ContentNegotiation
 - **Kamel**: Image loading library for Compose Multiplatform
 - **Kotlinx Serialization**: JSON serialization
+
+**Note**: WasmJS target is temporarily disabled as Voyager and Kamel dependencies don't yet support it. The project currently targets Android, iOS, Desktop (JVM), and Web (JS). WasmJS will be re-enabled once library support is available.
 
 ### Project Structure
 

@@ -28,15 +28,27 @@ Start with these files to understand the implementation:
 
 ## 🚀 Quick Start
 
+### Supported Platforms
+Currently supported platforms:
+- ✅ **Android** - Mobile devices and tablets
+- ✅ **iOS** - iPhone and iPad
+- ✅ **Desktop** - Windows, macOS, Linux (JVM)
+- ✅ **Web** - Modern browsers (JavaScript target)
+- ⏳ **Web (WasmJS)** - Temporarily disabled pending library support
+
+**Note**: WasmJS target will be re-enabled once Voyager and Kamel add WasmJS support.
+
 ### Prerequisites
 - JDK 17 or higher
 - Android SDK (for Android target)
 - Xcode (for iOS target, macOS only)
 
-### Run Web (WasmJS)
+### Run Web (JS)
 ```bash
-./gradlew :composeApp:wasmJsBrowserDevelopmentRun
+./gradlew :composeApp:jsBrowserDevelopmentRun
 ```
+
+**Note**: WasmJS target is temporarily disabled due to lack of support in Voyager and Kamel libraries. Use the JS target above for web deployment.
 
 ### Run Desktop (JVM)
 ```bash

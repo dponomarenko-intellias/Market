@@ -34,16 +34,24 @@ kotlin {
         binaries.executable()
     }
     
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        browser()
-        binaries.executable()
-    }
+    // WasmJS temporarily disabled due to lack of support in Voyager and Kamel dependencies
+    // Will be re-enabled once these libraries add WasmJS support
+    // @OptIn(ExperimentalWasmDsl::class)
+    // wasmJs {
+    //     browser()
+    //     binaries.executable()
+    // }
     
     sourceSets {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            // Voyager Navigation (Android)
+            implementation(libs.voyager.navigator)
+            implementation(libs.voyager.screenModel)
+            implementation(libs.voyager.koin)
+            // Kamel Image Loading (Android)
+            implementation(libs.kamel.image)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -55,16 +63,10 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(projects.shared)
-            // Voyager Navigation
-            implementation(libs.voyager.navigator)
-            implementation(libs.voyager.screenModel)
-            implementation(libs.voyager.koin)
             // Koin DI
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
             implementation(libs.koin.composeViewModel)
-            // Kamel Image Loading
-            implementation(libs.kamel.image)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -72,6 +74,28 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+            // Voyager Navigation (JVM)
+            implementation(libs.voyager.navigator)
+            implementation(libs.voyager.screenModel)
+            implementation(libs.voyager.koin)
+            // Kamel Image Loading (JVM)
+            implementation(libs.kamel.image)
+        }
+        iosMain.dependencies {
+            // Voyager Navigation (iOS)
+            implementation(libs.voyager.navigator)
+            implementation(libs.voyager.screenModel)
+            implementation(libs.voyager.koin)
+            // Kamel Image Loading (iOS)
+            implementation(libs.kamel.image)
+        }
+        jsMain.dependencies {
+            // Voyager Navigation (JS)
+            implementation(libs.voyager.navigator)
+            implementation(libs.voyager.screenModel)
+            implementation(libs.voyager.koin)
+            // Kamel Image Loading (JS)
+            implementation(libs.kamel.image)
         }
     }
 }

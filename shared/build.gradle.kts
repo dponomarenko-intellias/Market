@@ -23,10 +23,12 @@ kotlin {
         browser()
     }
     
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        browser()
-    }
+    // WasmJS temporarily disabled due to lack of support in Voyager and Kamel dependencies
+    // Will be re-enabled once these libraries add WasmJS support
+    // @OptIn(ExperimentalWasmDsl::class)
+    // wasmJs {
+    //     browser()
+    // }
     
     sourceSets {
         commonMain.dependencies {
@@ -54,9 +56,9 @@ kotlin {
         jsMain.dependencies {
             implementation(libs.ktor.clientJs)
         }
-        wasmJsMain.dependencies {
-            implementation(libs.ktor.clientJs)
-        }
+        // wasmJsMain.dependencies {
+        //     implementation(libs.ktor.clientJs)
+        // }
     }
 }
 
